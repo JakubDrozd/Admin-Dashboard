@@ -166,6 +166,22 @@ body {
   padding-top: 0.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    to left,
+    #ee7752 0%,
+    #e73c7e 25%,
+    #23a6d5 50%,
+    #23d5ab 100%
+  );
+  transition: 0.5s;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav > button:hover {
+  background-position: right center;
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 label[for="your-projects"] {

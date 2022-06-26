@@ -45,13 +45,28 @@ body {
 }
 
 .sidebar {
-  background-color: #1992d4;
   grid-row: 1/10;
   color: #fffefe;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .sidebar-title {
@@ -205,7 +220,7 @@ label[for="your-projects"] {
 }
 
 label[for="announcements"] {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .announcements {

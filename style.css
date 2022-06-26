@@ -53,7 +53,7 @@ body {
   gap: 1rem;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 10s ease infinite;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -91,6 +91,13 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.dashboard-mains > div:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  position: relative;
+  left: 30px;
 }
 
 .dashboard-others {
@@ -210,10 +217,29 @@ label[for="your-projects"] {
   height: auto;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
+}
+
+.card:hover > .mark {
+  background-color: white;
+}
+
+.card:hover ~ span {
+  color: white;
 }
 
 .mark {
-  background-color: #f0b429;
+  background-color: #23a6d5;
   padding: 0;
   margin: 0;
   width: 15px;
@@ -251,12 +277,19 @@ label[for="announcements"] {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   flex: 1 1 auto;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 
 hr {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+.info {
 }
 
 .trending {
@@ -274,6 +307,10 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 .trending > div > img {
   border-radius: 50%;

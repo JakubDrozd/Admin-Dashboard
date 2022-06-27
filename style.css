@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
 body {
   color: #272727;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  width: 100%;
+  height: fit-content;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
 }
@@ -20,6 +27,8 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: 0px;
   display: block;
   background-color: #ffffff;
   grid-column: 2/3;
@@ -45,6 +54,8 @@ body {
 }
 
 .sidebar {
+  position: sticky;
+  top: 0px;
   grid-row: 1/10;
   color: #fffefe;
   padding: 1rem;
@@ -111,6 +122,14 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.dashboard-others > div:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  position: relative;
+  left: 30px;
 }
 
 .first-row {
@@ -132,10 +151,15 @@ body {
   padding-right: 2rem;
 }
 
-.first-row > img {
+.first-row > a > img {
   width: 2.2rem;
   height: auto;
   border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.first-row > a > img:hover {
+  transform: scale(1.1);
 }
 
 .second-row {
@@ -150,10 +174,15 @@ body {
   gap: 1rem;
 }
 
-.welcome > img {
-  width: 3rem;
+.welcome > a > img {
+  width: 50px;
   height: auto;
   border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.welcome > a > img:hover {
+  transform: scale(1.2);
 }
 
 .nav {
@@ -210,11 +239,8 @@ label[for="your-projects"] {
   font-size: 0.8rem;
   background-color: #ffffff;
   border-radius: 8px;
-  padding-top: 1.5rem;
-  padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 1.5rem;
-  height: auto;
+  height: 150px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: all 0.2s ease-in-out;
@@ -243,6 +269,10 @@ label[for="your-projects"] {
   padding: 0;
   margin: 0;
   width: 15px;
+}
+
+.card-text {
+  padding: 1rem;
 }
 
 .left-side {
@@ -290,6 +320,17 @@ hr {
 }
 
 .info {
+  flex: 1;
+  transition: all 0.2s;
+}
+
+.info:hover {
+  transform: scale(1.1);
+  cursor: default;
+}
+
+.profile {
+  flex: 1;
 }
 
 .trending {
@@ -323,4 +364,7 @@ hr {
 
 label[for="trending"] {
   font-size: 1.3rem;
+}
+
+.welcome > img {
 }
